@@ -176,7 +176,7 @@ html {
     display: flex;
     justify-content: center;
     position: absolute;
-    right: 55rem;
+    right: 60rem;
     gap: 20px; /* Jarak antar tombol */
     margin-top: 20px; /* Jarak dari teks di atasnya */
     margin-bottom: 40px; /* Tambah jarak ke bawah agar tidak nabrak */
@@ -714,16 +714,94 @@ button:hover {
     align-items: center;
 }
 
+/* Scroll effect */
+.animated {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    -webkit-transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    -ms-transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    -o-transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animated.active {
+    opacity: 1;
+    transform: translateY(0); /* Gerak ke posisi normal */
+}
+
+.animated-image {
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+}
+
+.animated-image.active {
+    transform: scale(1.05);  /* gambar menjadi sedikit lebih besar */
+}
+
+
+/* Gaya untuk popup notifikasi */
+.notification-popup {
+    position: fixed;
+    bottom: 20px; /* Menempatkan di bawah halaman */
+    left: 50%;
+    transform: translateX(-50%); /* Agar popup berada di tengah */
+    background-color: rgba(0, 0, 0, 0.8); /* Background hitam transparan */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    display: none; /* Sembunyikan popup secara default */
+    z-index: 9999; /* Pastikan popup di atas konten lainnya */
+}
+
+/* Tombol silang di kanan atas */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Hover efek pada tombol silang */
+.close-btn:hover {
+    color: #f44336; /* Merah saat hover */
+}
+
+/* Gaya untuk teks */
+.notification-popup p {
+    margin: 0;
+}
+
+
+
 /* Tambahkan breakpoints untuk layar yang lebih kecil */
 @media (max-width: 1024px) {
     .logo-container .logocn {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 5px;
         width: 50px; /* Ukuran logo lebih kecil */
     }
 
     .text-container {
-        font-size: 13px; /* Ukuran font lebih kecil */
+        font-size: 10px;
+    }
+
+    .logos-container img {
+        width: 20px; /* Logo sedikit lebih kecil pada mobile */
+        flex: 1 1 10%; /* Logo menyesuaikan, tapi tetap bisa 4 per baris */
+    }
+
+    .logos-container {
+        justify-content: center; /* Mengatur agar logo tetap berada di tengah */
     }
 
     .navbar-container a {
@@ -779,6 +857,7 @@ button:hover {
         line-height: 24px;
         min-width: 140px;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -790,8 +869,24 @@ button:hover {
         position: sticky;
         top: 0;
     }
+    
+    .logo-container .logocn {
+        margin-left: 10px;
+        margin-right: 5px;
+        width: 50px; /* Ukuran logo lebih kecil */
+    }
+
+    .text-container {
+        font-size: 10px;
+    }
+
     .logos-container img {
-        display: none; /* Ukuran logo lebih kecil */
+        width: 20px; /* Logo sedikit lebih kecil pada mobile */
+        flex: 1 1 10%; /* Logo menyesuaikan, tapi tetap bisa 4 per baris */
+    }
+
+    .logos-container {
+        justify-content: center; /* Mengatur agar logo tetap berada di tengah */
     }
 
     .jurusan-slider {
@@ -831,8 +926,8 @@ button:hover {
     }
 
     .jurusan-item img {
-        width: 30%;
-        height: auto;
+        width: 30px;
+        height: 30px;
     }
 
     .jurusan-item p {
@@ -852,7 +947,6 @@ button:hover {
 }
 
 @media (max-width: 432px) {
-
     .header-container {
         height: 100%;
         width: 100%;
@@ -864,7 +958,8 @@ button:hover {
     }
 
     .logos-container img {
-        display: none; /* Ukuran logo lebih kecil */
+        width: 40px;
+        height: 40px;
     }
 
     .jurusan-slider {

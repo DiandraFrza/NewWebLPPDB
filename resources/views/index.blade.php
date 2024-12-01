@@ -55,65 +55,67 @@
         <div class="home-container">
             <div class="overlay"></div>
             <div class="home-text">
-                <h1>
+                <h1 class="animated">
                     Selamat Datang di SMK Citra Negara
                 </h1>
-                <p>
+                <p class="animated">
                     Sekolah Terbesar di Kota Depok dengan Segudang Prestasi
                 </p>
             </div>
             <div class="home-btn">
-                <button class="button-59 mr-10" role="button" onclick="window.location.href='{{ url('/admin/login') }}'">MASUK</button>
-                <button class="button-59 mr-10" role="button" onclick="window.location.href='{{ url('/ppdb_siswa/daftar') }}'">DAFTAR</button>
+                <button class="button-59 animated" role="button">MASUK</button>
+                <a href="{{ url('/ppdb/daftar') }}">
+                    <button class="button-59 animated" role="button">DAFTAR</button>
+                </a>
             </div>
             <div class="stats-container">
                 <div class="stat-item">
-                    <img src="{{('assets-user/img/gedung.png'); }}" alt="Ruang Kelas">
-                    <p class="count" data-target="72">0</p>
-                    <p>Kelas</p>
+                    <img class="animated-image" src="{{('assets-user/img/gedung.png'); }}" alt="Ruang Kelas">
+                    <p class="count animated" data-target="72">0</p>
+                    <p class="animated">Kelas</p>
                 </div>
                 <div class="stat-item">
-                    <img src="{{('assets-user/img/siswa.png'); }}" alt="Siswa">
-                    <p class="count" data-target="2890">0</p>
-                    <p>Murid</p>
+                    <img class="animated-image" src="{{('assets-user/img/siswa.png'); }}" alt="Siswa">
+                    <p class="count animated" data-target="2890">0</p>
+                    <p class="animated">Murid</p>
                 </div>
                 <div class="stat-item">
-                    <img src="{{('assets-user/img/guru.png'); }}" alt="Guru">
-                    <p class="count" data-target="100">0</p>
-                    <p>Guru</p>
+                    <img class="animated-image" src="{{('assets-user/img/guru.png'); }}" alt="Guru">
+                    <p class="count animated" data-target="100">0</p>
+                    <p class="animated">Guru</p>
                 </div>
                 <div class="stat-item">
-                    <img src="{{('assets-user/img/piagam.png'); }}" alt="Prestasi">
-                    <p class="count" data-target="1000">0</p>
-                    <p>Prestasi</p>
+                    <img class="animated-image" src="{{('assets-user/img/piagam.png'); }}" alt="Prestasi">
+                    <p class="count animated" data-target="1000">0</p>
+                    <p class="animated">Prestasi</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="kejuruan" class="p-4">
-        <h2 class="text-center fs-2 jurusan-text">List Jurusan</h2><br><br>
+        <h2 class="text-center fs-2 jurusan-text animated">List Jurusan</h2><br><br>
         <div class="jurusan-slider">
             <button class="prev" onclick="moveSlider(-1)">&#10094;</button>
             <div class="jurusan-wrapper" id="sliderContainer">
                 <div class="jurusan-item">
-                    <img src="{{('assets-user/img/jurusan/PPLG.png'); }}" alt="PPLG">
+                    <img class="animated-image" src="{{('assets-user/img/jurusan/PPLG.png'); }}" alt="PPLG">
                     <p>PPLG (Pengembangan Perangkat Lunak dan Gim)</p>
                 </div>
                 <div class="jurusan-item">
-                    <img src="{{('assets-user/img/jurusan/TKJT.png'); }}" alt="TKJT">
+                    <img class="animated-image" src="{{('assets-user/img/jurusan/TKJT.png'); }}" alt="TKJT">
                     <p>TKJT (Teknik Jaringan Komputer dan Telekomunikasi)</p>
                 </div>
                 <div class="jurusan-item">
-                    <img src="{{('assets-user/img/jurusan/PEMASARAN.png'); }}" alt="Pemasaran">
+                    <img class="animated-image" src="{{('assets-user/img/jurusan/PEMASARAN.png'); }}" alt="Pemasaran">
                     <p>Pemasaran</p>
                 </div>
                 <div class="jurusan-item">
-                    <img src="{{('assets-user/img/jurusan/DKV.png'); }}" alt="DKV">
+                    <img class="animated-image" src="{{('assets-user/img/jurusan/DKV.png'); }}" alt="DKV">
                     <p>DKV (Desain Komunikasi Visual)</p>
                 </div>
                 <div class="jurusan-item">
-                    <img src="{{('assets-user/img/jurusan/MPLB.png'); }}" alt="MPLB">
+                    <img class="animated-image" src="{{('assets-user/img/jurusan/MPLB.png'); }}" alt="MPLB">
                     <p>MPLB (Manajemen Perkantoran dan Layanan Bisnis)</p>
                 </div>
             </div>
@@ -122,24 +124,24 @@
     </section>
 
     <section id="sertifikat">
-        <h2 class="text-center fs-2 sertifikat-text">Sertifikat</h2><br><br>
+        <h2 class="text-center fs-2 sertifikat-text animated">Sertifikat</h2><br><br>
         <div class="sertifikat-container">
             <div class="sertifikat-wrapper">
                 <div class="certificate">
                     <img src="{{ asset('assets-user/img/sertifikat/certif1.png') }}" alt="Akreditasi Sertifikat">
-                    <div class="sertifikat-caption">Akreditasi Sertifikat</div>
+                    <div class="sertifikat-caption animated">Akreditasi Sertifikat</div>
                 </div>
                 <div class="certificate">
                     <img src="{{ asset('assets-user/img/sertifikat/certif2.png') }}" alt="Akreditasi Sertifikat">
-                    <div class="sertifikat-caption">Sekolah Masagi</div>
+                    <div class="sertifikat-caption animated">Sekolah Masagi</div>
                 </div>
                 <div class="certificate">
                     <img src="{{ asset('assets-user/img/sertifikat/certif3.png') }}" alt="Akreditasi Sertifikat">
-                    <div class="sertifikat-caption">Lomba Gala Kreasi</div>
+                    <div class="sertifikat-caption animated">Lomba Gala Kreasi</div>
                 </div>
                 <div class="certificate">
                     <img src="{{ asset('assets-user/img/sertifikat/certif4.png') }}" alt="Akreditasi Sertifikat">
-                    <div class="sertifikat-caption">Sekolah Adiwiyata</div>
+                    <div class="sertifikat-caption animated">Sekolah Adiwiyata</div>
                 </div>
             </div>
         </div>
@@ -149,8 +151,8 @@
         <header class="bg-yellow py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-black">
-                    <h1 class="display-4 fw-bolder">EKSTRAKULIKULER</h1>
-                    <p class="lead fw-normal text-black-50 mb-0">Daftarkan diri Anda Sekarang Juga!</p>
+                    <h1 class="display-4 fw-bolder animated">EKSTRAKULIKULER</h1>
+                    <p class="lead fw-normal text-black-50 mb-0 animated">Daftarkan diri Anda Sekarang Juga!</p>
                 </div>
             </div>
         </header>
@@ -165,7 +167,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder animated">BAND</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -184,7 +186,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder animated">FUTSAL</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -203,7 +205,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder animated">VOLI</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -222,7 +224,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder animated">PASKIBRA</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -241,7 +243,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder">PRAMUKA</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -260,7 +262,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder">ESPORT FREE FIRE</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -279,7 +281,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder animated">BASKET</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -298,7 +300,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder animated">IRMA</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -317,7 +319,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h5 class="fw-bolder animated">CITER</h5>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -336,7 +338,7 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Nama Eskul-->
-                                <h5 class="fw-bolder">XXXX</h5>
+                                <h6 class="fw-bolder animated">TAEKWONDO</h6>
                                 <!-- Deskripsi-->
                                 XXXXXXX
                             </div>
@@ -352,7 +354,7 @@
     </section>
 
     <section id="prestasi" class="pt-4">
-        <h2 class="text-center fs-2 prestasi-text">Prestasi Non Akademik</h2><br><br>
+        <h2 class="text-center fs-2 prestasi-text animated">Prestasi Non Akademik</h2><br><br>
         <div class="prestasi-wrapper">
             <button class="nav-button left">&#8249;</button>
             <div class="gallery">
@@ -400,9 +402,9 @@
     </div>
 
     <section id="contact">
-        <h2 class="text-center fs-2 prestasi-text">Contact</h2><br><br>
+        <h2 class="text-center fs-2 prestasi-text animated">Contact</h2><br><br>
         <div class="feedback-card">
-            <div class="feedback-header">
+            <div class="feedback-header animated">
                 SEND FEEDBACK
             </div>
             <form class="feedback-body">
@@ -424,7 +426,7 @@
 </body>
 <footer class="py-5 footer-wrapper">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; @Diandrfrzaa_</p>
+        <p class="m-0 text-center text-white animated">Copyright &copy; @Diandrfrzaa_</p>
     </div>
 </footer>
 <!-- Bootstrap core JS-->
@@ -432,6 +434,46 @@
 <script src="{{('assets-user/js/script.js'); }}"></script>
 <script src="{{('boostrap/js/boostrap.min.js'); }}"></script>
 <script>
+    function showNotification() {
+        document.getElementById('notification-popup').style.display = 'block'; // Menampilkan popup
+    }
+
+    // Menutup popup notifikasi
+    function closeNotification() {
+        document.getElementById('notification-popup').style.display = 'none'; // Menyembunyikan popup
+    }
+
+    // Menampilkan popup saat halaman dimuat
+    window.addEventListener('load', function() {
+        showNotification(); // Menampilkan popup saat halaman selesai dimuat
+    });
+
+    // Mendapatkan semua elemen gambar dan elemen dengan kelas 'animated'
+    const images = document.querySelectorAll('.animated-image');
+    const elements = document.querySelectorAll('.animated');
+
+    // Membuat observer untuk mendeteksi apakah elemen masuk atau keluar dari viewport
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!entry.target.classList.contains('active')) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Menghentikan pengamatan setelah animasi
+                }
+            } else {
+                // Menghapus kelas 'active' saat gambar keluar viewport jika perlu
+                entry.target.classList.remove('active');
+            }
+        });
+    }, {
+        threshold: 0.5 // Gambar dianggap "masuk" jika setidaknya 50% terlihat
+    });
+
+    // Mengamati semua elemen yang ingin dianimasikan (gambar dan elemen dengan kelas .animated)
+    [...images, ...elements].forEach(element => {
+        observer.observe(element);
+    });
+
     function toggleFullscreen() {
         const mapContainer = document.getElementById('mapContainer');
         mapContainer.classList.toggle('fullscreen');
@@ -457,6 +499,7 @@
             updateCount();
         });
     }
+
 
     // Memulai animasi saat halaman dimuat
     document.addEventListener("DOMContentLoaded", increaseNumberAnimation);
@@ -492,6 +535,21 @@
         gallery.scrollBy({
             left: 200,
             behavior: 'smooth'
+        });
+    });
+
+    // Menambahkan event listener pada scroll
+    window.addEventListener('scroll', function() {
+        const elements = document.querySelectorAll('.scroll-animate');
+
+        // Loop untuk cek setiap elemen
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top; // Dapatkan posisi elemen relatif ke layar
+            const screenPosition = window.innerHeight / 1.2; // Tentukan kapan animasi mulai (misalnya 20% dari layar)
+
+            if (elementPosition < screenPosition) {
+                element.classList.add('active'); // Tambahkan class active saat elemen muncul
+            }
         });
     });
 </script>
